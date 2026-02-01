@@ -62,12 +62,10 @@ import Button from 'primevue/button'
 .hero-overlay-layer {
   position: absolute;
   inset: 0;
-  /* Premium dark gradient mask */
-  background: linear-gradient(90deg, 
-    rgba(10, 25, 52, 0.9) 0%, 
-    rgba(10, 25, 52, 0.7) 40%, 
-    transparent 100%
-  );
+  /* Ultra-premium dark vignette and side-fade */
+  background: 
+    radial-gradient(circle at 30% 50%, transparent 20%, rgba(10, 25, 52, 0.4) 100%),
+    linear-gradient(90deg, #0A1934 0%, rgba(10, 25, 52, 0.8) 30%, transparent 100%);
 }
 
 .hero-mesh-gradient {
@@ -85,6 +83,7 @@ import Button from 'primevue/button'
   z-index: 10;
   display: flex;
   justify-content: flex-start;
+  margin-left: 2rem; /* Decisive left alignment within the container */
 }
 
 .hero-glass-card {
