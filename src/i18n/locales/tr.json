@@ -1,0 +1,137 @@
+{
+    "nav": {
+        "solutions": "Çözümler",
+        "services": "Hizmetler",
+        "about": "Hakkımızda",
+        "contact": "İletişim"
+    },
+    "hero": {
+        "badge": "YENİ NESİL DİJİTAL DÖNÜŞÜM",
+        "title1": "İşinizi Geleceğe",
+        "title2": "Taşıyoruz",
+        "description": "Levance, işletmenizi modern web teknolojileri ve entegre ERP çözümleri ile dijital çağın ön saflarına taşır.",
+        "cta": "Sizi Arayalım",
+        "scroll": "Aşağı Kaydır"
+    },
+    "solutions": {
+        "web": {
+            "title": "Web Çözümleri",
+            "subtitle": "Web Tasarım & Dijital Varlık",
+            "description": "Modern web teknolojileri ile dijital varlığınızı güçlendirin. Kullanıcı deneyimi odaklı, hızlı ve ölçeklenebilir web uygulamaları.",
+            "cta": "Web Çözümlerini Keşfedin"
+        },
+        "erp": {
+            "title": "ERP Çözümleri",
+            "subtitle": "Kurumsal Dönüşüm & CRM",
+            "description": "Kurumsal iş yüklerinizi optimize etmek için uçtan uca dijital dönüşüm. Verimlilik artıran, güvenilir ve entegre ERP altyapıları.",
+            "cta": "ERP Çözümlerini Keşfedin"
+        }
+    },
+    "values": {
+        "title": "Değerlerimiz",
+        "items": {
+            "transparency": {
+                "title": "Şeffaflık",
+                "description": "Tüm süreçlerimizde açık ve dürüst iletişim."
+            },
+            "innovation": {
+                "title": "Yenilikçi",
+                "description": "Sürekli değişen dünyada en güncel çözümler."
+            },
+            "customer": {
+                "title": "Müşteri Odaklı",
+                "description": "Sizin başarınız bizim önceliğimizdir."
+            }
+        }
+    },
+    "about": {
+        "hero": {
+            "title": "Biz Kimiz?",
+            "subtitle": "Levance, dijital dönüşüm yolculuğunuzda stratejik ortağınız olmak için burada."
+        },
+        "story": {
+            "label": "Hikayemiz",
+            "title": "Profesyonellikte",
+            "accent": "Mükemmellik",
+            "p1": "Levance, modern iş dünyasının karmaşık zorluklarına yenilikçi ve sürdürülebilir çözümler üretmek amacıyla kuruldu. Teknoloji ve stratejiyi bir araya getirerek, iş ortaklarımızın potansiyellerini en üst seviyeye çıkarmayı hedefliyoruz.",
+            "p2": "ERP sistemlerinden özel yazılım geliştirmeye, marka kimliği tasarımından stratejik danışmanlığa kadar geniş bir yelpazede hizmet sunarak kurumların dijital ayak izini güçlendiriyoruz."
+        },
+        "vision": {
+            "title": "Vizyonumuz",
+            "desc": "Global ölçekte dijital dönüşümün öncüsü olarak, iş dünyasını geleceğin teknolojileriyle şekillendiren en güvenilir çözüm ortağı olmak."
+        },
+        "mission": {
+            "title": "Misyonumuz",
+            "desc": "Müşterilerimize özel, yenilikçi ve verimlilik odaklı dijital çözümler sunarak rekabet avantajı sağlamak ve sürdürülebilir büyüme yolunda onlara rehberlik etmek."
+        },
+        "stats": {
+            "team": "Alanında Profesyonel Ekip Arkadaşı",
+            "projects": "Tamamlanan Proje",
+            "published": "Yayımlanmış Proje",
+            "support": "Teknik Destek"
+        }
+    },
+    "services_page": {
+        "title": "Hizmetlerimiz",
+        "subtitle": "Levance ile dijital dünyada fark yaratan profesyonel çözümler.",
+        "cta_more": "Detaylı Bilgi",
+        "list": {
+            "web": {
+                "title": "Web Tasarım ve Dijital Ayak İzi Hizmetleri",
+                "desc": "Modern, hızlı ve SEO uyumlu web siteleri ile markanızın dijital dünyadaki görünürlüğünü en üst seviyeye taşıyoruz."
+            },
+            "branding": {
+                "title": "Marka Kimliği Tasarımı ve Danışmanlığı",
+                "desc": "Logo tasarımından kurumsal kimliğe kadar markanızı yansıtan özgün ve akılda kalıcı görsel dünyalar yaratıyoruz."
+            },
+            "erp_crm": {
+                "title": "ERP ve CRM Çözümleri",
+                "desc": "İş süreçlerinizi optimize eden, verimliliği artıran ve kararlarınızı verilerle destekleyen kurumsal altyapılar."
+            },
+            "mobile": {
+                "title": "Mobil Uygulama Geliştirme",
+                "desc": "iOS ve Android platformları için kullanıcı odaklı, yüksek performanslı ve ölçeklenebilir mobil uygulamalar."
+            },
+            "custom": {
+                "title": "Size Özel Çözümler",
+                "desc": "İşletmenizin kendine has ihtiyaçlarına yönelik, esnek ve tam kapsamlı özel yazılım geliştirme hizmetleri."
+            }
+        }
+    },
+    "contact_page": {
+        "title": "Bize Ulaşın",
+        "subtitle": "İhtiyacınıza uygun iletişim kanalını seçin, 24 saat içerisinde geri dönüş yapalım.",
+        "tabs": {
+            "support": "Destek",
+            "partnership": "Partnerlik",
+            "corporate": "Kurumsal"
+        },
+        "form": {
+            "email": "E-posta Adresi",
+            "phone": "Telefon Numarası",
+            "message": "Mesajınız",
+            "email_placeholder": "ornek@mail.com",
+            "phone_placeholder": "05xx xxx xx xx",
+            "message_placeholder": "Size nasıl yardımcı olabiliriz?",
+            "submit": "Gönder"
+        },
+        "partnership": {
+            "title": "İş Ortağımız Olun",
+            "desc": "Levance olarak global ağımızı genişletiyoruz. Sinerji yaratabileceğimiz projeler için bizimle iletişime geçin."
+        },
+        "corporate": {
+            "title": "Kurumsal İletişim",
+            "desc": "Basın bültenleri, kurumsal etkinlikler ve resmi yazışmalar için aşağıdaki kanalları kullanabilirsiniz."
+        }
+    },
+    "cta": {
+        "title": "Hemen bir toplantı planlayalım",
+        "subtitle": "İhtiyaçlarınızı dinlemek ve size en uygun çözümü sunmak için sabırsızlanıyoruz.",
+        "btn": "Bize Ulaşın"
+    },
+    "footer": {
+        "description": "Profesyonel iş çözümleri ve stratejik danışmanlık.",
+        "quick_links": "Hızlı Bağlantılar",
+        "rights": "Tüm hakları saklıdır."
+    }
+}

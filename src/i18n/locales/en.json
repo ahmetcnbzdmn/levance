@@ -1,0 +1,137 @@
+{
+    "nav": {
+        "solutions": "Solutions",
+        "services": "Services",
+        "about": "About Us",
+        "contact": "Contact"
+    },
+    "hero": {
+        "badge": "NEXT GENERATION DIGITAL TRANSFORMATION",
+        "title1": "Carrying Your Business",
+        "title2": "To The Future",
+        "description": "Levance carries your business to the forefront of the digital age with modern web technologies and integrated ERP solutions.",
+        "cta": "Let Us Call You",
+        "scroll": "Scroll Down"
+    },
+    "solutions": {
+        "web": {
+            "title": "Web Solutions",
+            "subtitle": "Web Design & Digital Presence",
+            "description": "Strengthen your digital presence with modern web technologies. User experience focused, fast, and scalable web applications.",
+            "cta": "Explore Web Solutions"
+        },
+        "erp": {
+            "title": "ERP Solutions",
+            "subtitle": "Enterprise Transformation & CRM",
+            "description": "End-to-end digital transformation to optimize your corporate workloads. Productivity-enhancing, reliable, and integrated ERP infrastructures.",
+            "cta": "Explore ERP Solutions"
+        }
+    },
+    "values": {
+        "title": "Our Values",
+        "items": {
+            "transparency": {
+                "title": "Transparency",
+                "description": "Open and honest communication in all our processes."
+            },
+            "innovation": {
+                "title": "Innovative",
+                "description": "The most up-to-date solutions in a constantly changing world."
+            },
+            "customer": {
+                "title": "Customer Centric",
+                "description": "Your success is our priority."
+            }
+        }
+    },
+    "about": {
+        "hero": {
+            "title": "Who Are We?",
+            "subtitle": "Levance is here to be your strategic partner in your digital transformation journey."
+        },
+        "story": {
+            "label": "Our Story",
+            "title": "Excellence in",
+            "accent": "Professionalism",
+            "p1": "Levance was established to produce innovative and sustainable solutions to the complex challenges of the modern business world. By bringing together technology and strategy, we aim to maximize the potential of our business partners.",
+            "p2": "We strengthen the digital footprint of institutions by providing a wide range of services from ERP systems to custom software development, from brand identity design to strategic consultancy."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "desc": "To be the most reliable solution partner as a leader of digital transformation on a global scale, shaping the business world with the technologies of the future."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "desc": "To provide competitive advantage by offering customized, innovative, and productivity-focused digital solutions to our customers and to guide them on the path of sustainable growth."
+        },
+        "stats": {
+            "team": "Professional Team Members",
+            "projects": "Completed Projects",
+            "published": "Published Projects",
+            "support": "Technical Support"
+        }
+    },
+    "services_page": {
+        "title": "Our Services",
+        "subtitle": "Professional solutions that make a difference in the digital world with Levance.",
+        "cta_more": "Detailed Info",
+        "list": {
+            "web": {
+                "title": "Web Design and Digital Footprint Services",
+                "desc": "We maximize your brand's visibility in the digital world with modern, fast, and SEO-compatible websites."
+            },
+            "branding": {
+                "title": "Brand Identity Design and Consultancy",
+                "desc": "We create original and memorable visual worlds reflecting your brand from logo design to corporate identity."
+            },
+            "erp_crm": {
+                "title": "ERP and CRM Solutions",
+                "desc": "Corporate infrastructures that optimize your business processes, increase efficiency, and support your decisions with data."
+            },
+            "mobile": {
+                "title": "Mobile Application Development",
+                "desc": "User-oriented, high-performance, and scalable mobile applications for iOS and Android platforms."
+            },
+            "custom": {
+                "title": "Custom Solutions for You",
+                "desc": "Flexible and full-scope custom software development services for your business's unique needs."
+            }
+        }
+    },
+    "contact_page": {
+        "title": "Contact Us",
+        "subtitle": "Choose the contact channel suitable for your needs, we will get back to you within 24 hours.",
+        "tabs": {
+            "support": "Support",
+            "partnership": "Partnership",
+            "corporate": "Corporate"
+        },
+        "form": {
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "message": "Your Message",
+            "email_placeholder": "example@mail.com",
+            "phone_placeholder": "+0 (000) 000 00 00",
+            "message_placeholder": "How can we help you?",
+            "submit": "Send"
+        },
+        "partnership": {
+            "title": "Become Our Partner",
+            "desc": "We are expanding our global network as Levance. Contact us for projects where we can create synergy."
+        },
+        "corporate": {
+            "title": "Corporate Communication",
+            "desc": "You can use the following channels for press releases, corporate events, and official correspondence."
+        }
+    },
+    "cta": {
+        "title": "Let's plan a meeting right away",
+        "subtitle": "We look forward to listening to your needs and offering you the most suitable solution.",
+        "btn": "Contact Us"
+    },
+    "footer": {
+        "description": "Professional business solutions and strategic consultancy.",
+        "quick_links": "Quick Links",
+        "rights": "All rights reserved."
+    }
+}

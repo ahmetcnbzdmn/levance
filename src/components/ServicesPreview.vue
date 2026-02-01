@@ -2,17 +2,17 @@
   <section class="services">
     <div class="container">
       <div class="section-header">
-        <h2>Hizmetlerimiz</h2>
-        <p>Size özel sunduğumuz kurumsal çözümler</p>
+        <h2>{{ $t('services_page.title') }}</h2>
+        <p>{{ $t('services_page.subtitle') }}</p>
       </div>
       <div class="services-grid">
-        <Card v-for="service in services" :key="service.title" class="service-card">
+        <Card v-for="service in services" :key="service.titleKey" class="service-card">
           <template #title>
             <i :class="service.icon" class="service-icon"></i>
-            <h3>{{ service.title }}</h3>
+            <h3>{{ $t(service.titleKey) }}</h3>
           </template>
           <template #content>
-            <p>{{ service.description }}</p>
+            <p>{{ $t(service.descKey) }}</p>
           </template>
         </Card>
       </div>
@@ -24,9 +24,9 @@
 import Card from 'primevue/card'
 
 const services = [
-  { title: 'Strateji', description: 'İş hedeflerinize ulaşmak için yol haritası.', icon: 'pi pi-compass' },
-  { title: 'Danışmanlık', description: 'Uzman görüşleri ile süreç iyileştirme.', icon: 'pi pi-users' },
-  { title: 'Teknoloji', description: 'Modern altyapı ve dijital dönüşüm.', icon: 'pi pi-desktop' }
+  { titleKey: 'services_page.list.branding.title', descKey: 'services_page.list.branding.desc', icon: 'pi pi-palette' },
+  { titleKey: 'services_page.list.web.title', descKey: 'services_page.list.web.desc', icon: 'pi pi-desktop' },
+  { titleKey: 'services_page.list.erp_crm.title', descKey: 'services_page.list.erp_crm.desc', icon: 'pi pi-database' }
 ]
 </script>
 

@@ -2,8 +2,8 @@
   <div class="services-page">
     <div class="container py-12">
       <div class="section-header text-center mb-12 fade-in">
-        <h1 class="page-title">Hizmetlerimiz</h1>
-        <p class="page-subtitle">Levance ile dijital dünyada fark yaratan profesyonel çözümler.</p>
+        <h1 class="page-title">{{ $t('services_page.title') }}</h1>
+        <p class="page-subtitle">{{ $t('services_page.subtitle') }}</p>
       </div>
 
       <div class="services-grid">
@@ -12,10 +12,10 @@
             <div class="icon-wrapper">
               <i :class="service.icon"></i>
             </div>
-            <h3 class="service-title">{{ service.title }}</h3>
-            <p class="service-desc">{{ service.description }}</p>
+            <h3 class="service-title">{{ $t(service.titleKey) }}</h3>
+            <p class="service-desc">{{ $t(service.descKey) }}</p>
             <div class="card-footer">
-              <Button label="Detaylı Bilgi" class="p-button-text p-button-sm custom-btn" />
+              <Button :label="$t('services_page.cta_more')" class="p-button-text p-button-sm custom-btn" />
             </div>
           </div>
           <!-- Decorative Background Glow -->
@@ -31,28 +31,28 @@ import Button from 'primevue/button'
 
 const services = [
   {
-    title: 'Web Tasarım ve Dijital Ayak İzi Hizmetleri',
-    description: 'Modern, hızlı ve SEO uyumlu web siteleri ile markanızın dijital dünyadaki görünürlüğünü en üst seviyeye taşıyoruz.',
+    titleKey: 'services_page.list.web.title',
+    descKey: 'services_page.list.web.desc',
     icon: 'pi pi-desktop'
   },
   {
-    title: 'Marka Kimliği Tasarımı ve Danışmanlığı',
-    description: 'Logo tasarımından kurumsal kimliğe kadar markanızı yansıtan özgün ve akılda kalıcı görsel dünyalar yaratıyoruz.',
+    titleKey: 'services_page.list.branding.title',
+    descKey: 'services_page.list.branding.desc',
     icon: 'pi pi-palette'
   },
   {
-    title: 'ERP ve CRM Çözümleri',
-    description: 'İş süreçlerinizi optimize eden, verimliliği artıran ve kararlarınızı verilerle destekleyen kurumsal altyapılar.',
+    titleKey: 'services_page.list.erp_crm.title',
+    descKey: 'services_page.list.erp_crm.desc',
     icon: 'pi pi-database'
   },
   {
-    title: 'Mobil Uygulama Geliştirme',
-    description: 'iOS ve Android platformları için kullanıcı odaklı, yüksek performanslı ve ölçeklenebilir mobil uygulamalar.',
+    titleKey: 'services_page.list.mobile.title',
+    descKey: 'services_page.list.mobile.desc',
     icon: 'pi pi-mobile'
   },
   {
-    title: 'Size Özel Çözümler',
-    description: 'İşletmenizin kendine has ihtiyaçlarına yönelik, esnek ve tam kapsamlı özel yazılım geliştirme hizmetleri.',
+    titleKey: 'services_page.list.custom.title',
+    descKey: 'services_page.list.custom.desc',
     icon: 'pi pi-lightbulb'
   }
 ]

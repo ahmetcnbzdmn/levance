@@ -2,29 +2,32 @@
   <section class="values">
     <div class="container values-grid">
       <div class="values-image">
-        <div class="image-mock"></div>
+        <div class="image-container fade-up">
+          <img src="../assets/images/values-tech.png" alt="Levance Core Values" class="values-img" />
+          <div class="image-accent"></div>
+        </div>
       </div>
       <div class="values-text">
-        <h2>Değerlerimiz</h2>
+        <h2>{{ $t('values.title') }}</h2>
         <div class="value-item">
           <i class="pi pi-check-circle"></i>
           <div>
-            <h4>Şeffaflık</h4>
-            <p>Tüm süreçlerimizde açık ve dürüst iletişim.</p>
+            <h4>{{ $t('values.items.transparency.title') }}</h4>
+            <p>{{ $t('values.items.transparency.description') }}</p>
           </div>
         </div>
         <div class="value-item">
           <i class="pi pi-check-circle"></i>
           <div>
-            <h4>Yenilikçi</h4>
-            <p>Sürekli değişen dünyada en güncel çözümler.</p>
+            <h4>{{ $t('values.items.innovation.title') }}</h4>
+            <p>{{ $t('values.items.innovation.description') }}</p>
           </div>
         </div>
         <div class="value-item">
           <i class="pi pi-check-circle"></i>
           <div>
-            <h4>Müşteri Odaklı</h4>
-            <p>Sizin başarınız bizim önceliğimizdir.</p>
+            <h4>{{ $t('values.items.customer.title') }}</h4>
+            <p>{{ $t('values.items.customer.description') }}</p>
           </div>
         </div>
       </div>

@@ -4,24 +4,24 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="logo-text">LEVANCE</span>
-          <p>Profesyonel iş çözümleri ve stratejik danışmanlık.</p>
+          <p>{{ $t('footer.description') }}</p>
         </div>
         <div class="footer-links">
-          <h4>Hızlı Bağlantılar</h4>
+          <h4>{{ $t('footer.quick_links') }}</h4>
           <ul>
-            <li><a href="#">Hizmetlerimiz</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">Bize Ulaşın</a></li>
+            <li><router-link to="/hizmetlerimiz">{{ $t('nav.services') }}</router-link></li>
+            <li><router-link to="/hakkimizda">{{ $t('nav.about') }}</router-link></li>
+            <li><router-link to="/bize-ulasin">{{ $t('nav.contact') }}</router-link></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4>İletişim</h4>
+          <h4>{{ $t('nav.contact') }}</h4>
           <p>info@levance.com</p>
           <p>İstanbul, Türkiye</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Levance. Tüm hakları saklıdır.</p>
+        <p>&copy; 2024 Levance. {{ $t('footer.rights') }}</p>
       </div>
     </div>
   </footer>

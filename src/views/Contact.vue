@@ -5,40 +5,40 @@
         <!-- Left Section: Forms & Tabs -->
         <div class="contact-forms-area fade-in">
           <div class="contact-card">
-            <h1 class="contact-title">Bize Ulaşın</h1>
-            <p class="contact-subtitle">İhtiyacınıza uygun iletişim kanalını seçin, 24 saat içerisinde geri dönüş yapalım.</p>
+            <h1 class="contact-title">{{ $t('contact_page.title') }}</h1>
+            <p class="contact-subtitle">{{ $t('contact_page.subtitle') }}</p>
 
             <Tabs value="0">
               <TabList>
-                <Tab value="0">Destek</Tab>
-                <Tab value="1">Partnerlik</Tab>
-                <Tab value="2">Kurumsal</Tab>
+                <Tab value="0">{{ $t('contact_page.tabs.support') }}</Tab>
+                <Tab value="1">{{ $t('contact_page.tabs.partnership') }}</Tab>
+                <Tab value="2">{{ $t('contact_page.tabs.corporate') }}</Tab>
               </TabList>
               <TabPanels>
                 <!-- Ticket / Support Form -->
                 <TabPanel value="0">
                   <div class="form-grid">
                     <div class="field">
-                      <label for="email">E-posta Adresi</label>
-                      <InputText id="email" v-model="ticket.email" placeholder="ornek@mail.com" class="w-full" />
+                      <label for="email">{{ $t('contact_page.form.email') }}</label>
+                      <InputText id="email" v-model="ticket.email" :placeholder="$t('contact_page.form.email_placeholder')" class="w-full" />
                     </div>
                     <div class="field">
-                      <label for="phone">Telefon Numarası</label>
-                      <InputText id="phone" v-model="ticket.phone" placeholder="05xx xxx xx xx" class="w-full" />
+                      <label for="phone">{{ $t('contact_page.form.phone') }}</label>
+                      <InputText id="phone" v-model="ticket.phone" :placeholder="$t('contact_page.form.phone_placeholder')" class="w-full" />
                     </div>
                     <div class="field full-width">
-                      <label for="message">Mesajınız</label>
-                      <Textarea id="message" v-model="ticket.message" rows="5" placeholder="Size nasıl yardımcı olabiliriz?" class="w-full" />
+                      <label for="message">{{ $t('contact_page.form.message') }}</label>
+                      <Textarea id="message" v-model="ticket.message" rows="5" :placeholder="$t('contact_page.form.message_placeholder')" class="w-full" />
                     </div>
-                    <Button label="Gönder" class="p-button-primary premium-btn mt-4" @click="sendTicket" />
+                    <Button :label="$t('contact_page.form.submit')" class="p-button-primary premium-btn mt-4" @click="sendTicket" />
                   </div>
                 </TabPanel>
 
                 <!-- Partnership Tab -->
                 <TabPanel value="1">
                   <div class="partnership-info">
-                    <h3>İş Ortağımız Olun</h3>
-                    <p>Levance olarak global ağımızı genişletiyoruz. Sinerji yaratabileceğimiz projeler için bizimle iletişime geçin.</p>
+                    <h3>{{ $t('contact_page.partnership.title') }}</h3>
+                    <p>{{ $t('contact_page.partnership.desc') }}</p>
                     <div class="contact-details mt-6">
                       <div class="detail-item">
                         <i class="pi pi-envelope"></i>
@@ -51,8 +51,8 @@
                 <!-- Corporate Tab -->
                 <TabPanel value="2">
                   <div class="corporate-info">
-                    <h3>Kurumsal İletişim</h3>
-                    <p>Basın bültenleri, kurumsal etkinlikler ve resmi yazışmalar için aşağıdaki kanalları kullanabilirsiniz.</p>
+                    <h3>{{ $t('contact_page.corporate.title') }}</h3>
+                    <p>{{ $t('contact_page.corporate.desc') }}</p>
                     <div class="contact-details mt-6">
                       <div class="detail-item">
                         <i class="pi pi-envelope"></i>

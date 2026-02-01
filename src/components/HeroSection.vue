@@ -14,16 +14,14 @@
         <div class="hero-text-content">
           <div class="top-accent-bar"></div>
           <h1 class="hero-title">
-            İşinizi <span class="accent-text">Geleceğe</span> <br/>
-            Birlikte Taşıyoruz
+            {{ $t('hero.title1') }} <span class="accent-text">{{ $t('hero.title2') }}</span>
           </h1>
           <p class="hero-subtitle">
-            Kurumsal çözümlerle verimliliğinizi artırın, stratejik adımlarla dijital dünyada fark yaratın. 
-            Levance ile dönüşüm başlasın.
+            {{ $t('hero.description') }}
           </p>
           <div class="hero-actions">
-            <Button label="Hemen Başlayın" class="p-button-primary premium-btn" />
-            <Button label="Hakkımızda" class="p-button-text white-link-btn" icon="pi pi-arrow-right" iconPos="right" />
+            <Button :label="$t('hero.cta')" class="p-button-primary premium-btn" />
+            <Button :label="$t('nav.about')" class="p-button-text white-link-btn" icon="pi pi-arrow-right" iconPos="right" />
           </div>
         </div>
       </div>

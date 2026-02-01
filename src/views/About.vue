@@ -4,9 +4,9 @@
     <section class="about-hero">
       <div class="mesh-gradient"></div>
       <div class="container relative z-10">
-        <h1 class="about-title fade-up">Biz Kimiz?</h1>
+        <h1 class="about-title fade-up">{{ $t('about.hero.title') }}</h1>
         <p class="about-subtitle fade-up" style="animation-delay: 0.1s">
-          Levance, dijital dönüşüm yolculuğunuzda stratejik ortağınız olmak için burada.
+          {{ $t('about.hero.subtitle') }}
         </p>
       </div>
     </section>
@@ -15,15 +15,13 @@
     <section class="story-section container">
       <div class="story-content">
         <div class="story-text fade-in">
-          <span class="label">Hikayemiz</span>
-          <h2 class="section-title">Profesyonellikte <span class="accent-text">Mükemmellik</span></h2>
+          <span class="label">{{ $t('about.story.label') }}</span>
+          <h2 class="section-title">{{ $t('about.story.title') }} <span class="accent-text">{{ $t('about.story.accent') }}</span></h2>
           <p>
-            Levance, modern iş dünyasının karmaşık zorluklarına yenilikçi ve sürdürülebilir çözümler üretmek amacıyla kuruldu. 
-            Teknoloji ve stratejiyi bir araya getirerek, iş ortaklarımızın potansiyellerini en üst seviyeye çıkarmayı hedefliyoruz.
+            {{ $t('about.story.p1') }}
           </p>
           <p>
-            ERP sistemlerinden özel yazılım geliştirmeye, marka kimliği tasarımından stratejik danışmanlığa kadar geniş bir yelpazede 
-            hizmet sunarak kurumların dijital ayak izini güçlendiriyoruz.
+            {{ $t('about.story.p2') }}
           </p>
         </div>
         <div class="story-image fade-in" style="animation-delay: 0.2s">
@@ -41,13 +39,13 @@
       <div class="container grid-2">
         <div class="vm-card fade-up">
           <div class="icon-box blue"><i class="pi pi-eye"></i></div>
-          <h3>Vizyonumuz</h3>
-          <p>Global ölçekte dijital dönüşümün öncüsü olarak, iş dünyasını geleceğin teknolojileriyle şekillendiren en güvenilir çözüm ortağı olmak.</p>
+          <h3>{{ $t('about.vision.title') }}</h3>
+          <p>{{ $t('about.vision.desc') }}</p>
         </div>
         <div class="vm-card fade-up" style="animation-delay: 0.2s">
           <div class="icon-box green"><i class="pi pi-compass"></i></div>
-          <h3>Misyonumuz</h3>
-          <p>Müşterilerimize özel, yenilikçi ve verimlilik odaklı dijital çözümler sunarak rekabet avantajı sağlamak ve sürdürülebilir büyüme yolunda onlara rehberlik etmek.</p>
+          <h3>{{ $t('about.mission.title') }}</h3>
+          <p>{{ $t('about.mission.desc') }}</p>
         </div>
       </div>
     </section>
@@ -57,7 +55,7 @@
       <div class="stats-grid">
         <div v-for="(stat, index) in stats" :key="index" class="stat-item fade-in" :style="{ animationDelay: (index * 0.15) + 's' }">
           <div class="stat-number">{{ stat.value }}</div>
-          <div class="stat-label">{{ stat.label }}</div>
+          <div class="stat-label">{{ $t(stat.labelKey) }}</div>
         </div>
       </div>
     </section>
@@ -65,11 +63,14 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 const stats = [
-  { value: '10+', label: 'Alanında Profesyonel Ekip Arkadaşı' },
-  { value: '35+', label: 'Tamamlanan Proje' },
-  { value: '8+', label: 'Yayımlanmış Proje' },
-  { value: '7/24', label: 'Teknik Destek' }
+  { value: '10+', labelKey: 'about.stats.team' },
+  { value: '35+', labelKey: 'about.stats.projects' },
+  { value: '8+', labelKey: 'about.stats.published' },
+  { value: '7/24', labelKey: 'about.stats.support' }
 ]
 </script>
 

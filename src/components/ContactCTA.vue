@@ -2,9 +2,9 @@
   <section class="contact-cta">
     <div class="container cta-box">
       <div class="cta-content">
-        <h2>Hemen bir toplantı planlayalım</h2>
-        <p>İhtiyaçlarınızı dinlemek ve size en uygun çözümü sunmak için sabırsızlanıyoruz.</p>
-        <Button label="Bize Ulaşın" class="cta-btn p-button-success" />
+        <h2>{{ $t('cta.title') }}</h2>
+        <p>{{ $t('cta.subtitle') }}</p>
+        <Button :label="$t('cta.btn')" class="cta-btn p-button-success" />
       </div>
     </div>
   </section>

@@ -2,29 +2,29 @@
   <section class="solutions-split">
     <!-- Left Side: Web Solutions -->
     <div class="solution-half web-solutions">
-      <div class="background-overlay"></div>
-      <div class="content">
+      <div class="glass-overlay"></div>
+      <div class="content fade-up">
         <span class="top-label">Levance</span>
-        <h2 class="title">Web Solutions</h2>
+        <h2 class="title">{{ $t('solutions.web.title') }}</h2>
+        <span class="subtitle-tag">{{ $t('solutions.web.subtitle') }}</span>
         <p class="description">
-          Modern web teknolojileri ile dijital varlığınızı güçlendirin. 
-          Kullanıcı deneyimi odaklı, hızlı ve ölçeklenebilir web uygulamaları.
+          {{ $t('solutions.web.description') }}
         </p>
-        <Button label="Web Çözümlerini Keşfedin" class="p-button-outlined p-button-white explore-btn" />
+        <Button :label="$t('solutions.web.cta')" class="p-button-outlined p-button-white explore-btn" />
       </div>
     </div>
 
     <!-- Right Side: ERP Solutions -->
     <div class="solution-half erp-solutions">
-      <div class="background-overlay"></div>
-      <div class="content">
+      <div class="glass-overlay"></div>
+      <div class="content fade-up">
         <span class="top-label">Levance</span>
-        <h2 class="title">ERP Solutions</h2>
+        <h2 class="title">{{ $t('solutions.erp.title') }}</h2>
+        <span class="subtitle-tag">{{ $t('solutions.erp.subtitle') }}</span>
         <p class="description">
-          Kurumsal iş yüklerinizi optimize etmek için uçtan uca dijital dönüşüm. 
-          Verimlilik artıran, güvenilir ve entegre ERP altyapıları.
+          {{ $t('solutions.erp.description') }}
         </p>
-        <Button label="ERP Çözümlerini Keşfedin" class="p-button-outlined p-button-white explore-btn" />
+        <Button :label="$t('solutions.erp.cta')" class="p-button-outlined p-button-white explore-btn" />
       </div>
     </div>
   </section>
@@ -37,129 +37,144 @@ import Button from 'primevue/button'
 <style scoped>
 .solutions-split {
   display: flex;
-  min-height: 500px;
+  min-height: 650px;
   width: 100%;
   overflow: hidden;
+  background-color: #050b18;
 }
 
 .solution-half {
   flex: 1;
   position: relative;
-  padding: 5rem 10%;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  overflow: hidden;
 }
 
-/* Backgrounds & Textures */
+/* Backgrounds - Ultra Premium Gradients */
 .web-solutions {
-  background: linear-gradient(135deg, var(--deep-blue) 0%, #2557b5 100%);
+  background: radial-gradient(circle at 0% 0%, #1e4bb3 0%, #0a1934 100%);
 }
 
 .erp-solutions {
-  background: linear-gradient(135deg, #008f7a 0%, var(--accent-green) 100%);
+  background: radial-gradient(circle at 100% 100%, #009688 0%, #051a17 100%);
 }
 
-.background-overlay {
+/* Decorative Glass Overlay */
+.glass-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.15;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%);
   pointer-events: none;
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2) 0%, transparent 40%);
+  z-index: 1;
 }
 
-.web-solutions .background-overlay {
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 L40 40 L10 70' stroke='white' fill='none' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E");
-  background-size: 200px 200px;
+/* Hover Growth Logic */
+.solutions-split:hover .solution-half {
+  flex: 0.85;
 }
 
-.erp-solutions .background-overlay {
-  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='40' stroke='white' fill='none' stroke-width='1' opacity='0.2'/%3E%3C/svg%3E");
-  background-size: 150px 150px;
-}
-
-/* Hover Effects */
 .solution-half:hover {
-  flex: 1.15;
-}
-
-.solution-half:hover .background-overlay {
-  opacity: 0.25;
+  flex: 1.15 !important;
 }
 
 /* Content Styling */
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
-  width: 500px; /* Fixed width to prevent text reflow on parent scale */
-  margin: 0 auto;
+  padding: 0 2rem;
+  width: 500px;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+}
+
+.solution-half:hover .content {
+  transform: scale(1.05);
 }
 
 .top-label {
   display: block;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  opacity: 0.9;
-  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--accent-green);
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   line-height: 1.1;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  letter-spacing: -0.02em;
+}
+
+.subtitle-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  opacity: 0.85;
+  font-weight: 400;
 }
 
-/* Button Overrides */
+/* Premium Button Styling */
 :deep(.p-button.p-button-outlined.p-button-white) {
-  color: white;
-  border-color: white;
-  padding: 0.75rem 2rem;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  padding: 1rem 2.5rem !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s ease !important;
 }
 
 :deep(.p-button.p-button-outlined.p-button-white:hover) {
-  background: white;
-  color: var(--deep-blue);
-  border-color: white;
+  background: white !important;
+  color: #0a1934 !important;
+  border-color: white !important;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .erp-solutions :deep(.p-button.p-button-outlined.p-button-white:hover) {
-  color: #008f7a;
+  color: #005a4e !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .solutions-split {
+    min-height: 1000px;
     flex-direction: column;
   }
-  .solution-half {
-    padding: 4rem 1.5rem;
-  }
-  .solution-half:hover {
+  .solutions-split:hover .solution-half {
     flex: 1;
   }
+  .solution-half:hover {
+    flex: 1 !important;
+  }
   .title {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+  }
+  .content {
+    padding: 2rem;
   }
 }
 </style>

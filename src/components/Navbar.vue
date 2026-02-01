@@ -11,15 +11,26 @@
 
       <!-- Center: Links -->
       <ul class="nav-center">
-        <li><router-link to="/hizmetlerimiz" class="nav-link">Hizmetlerimiz</router-link></li>
-        <li><router-link to="/hakkimizda" class="nav-link">Hakkımızda</router-link></li>
-        <li><router-link to="/bize-ulasin" class="nav-link">Bize Ulaşın</router-link></li>
+        <li><router-link to="/hizmetlerimiz" class="nav-link">{{ $t('nav.services') }}</router-link></li>
+        <li><router-link to="/hakkimizda" class="nav-link">{{ $t('nav.about') }}</router-link></li>
+        <li><router-link to="/bize-ulasin" class="nav-link">{{ $t('nav.contact') }}</router-link></li>
       </ul>
 
       <!-- Right: Action Button -->
       <div class="nav-right">
+        <div class="lang-switcher">
+          <button 
+            :class="['lang-btn', { active: locale === 'tr' }]" 
+            @click="locale = 'tr'"
+          >TR</button>
+          <div class="lang-divider"></div>
+          <button 
+            :class="['lang-btn', { active: locale === 'en' }]" 
+            @click="locale = 'en'"
+          >EN</button>
+        </div>
         <Button 
-          label="Toplantı Talep Edin" 
+          :label="$t('nav.contact')" 
           class="p-button-outlined premium-nav-btn" 
           @click="showMeetingModal = true"
         />
@@ -67,10 +78,12 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import InputText from 'primevue/inputtext'
 
+const { locale } = useI18n()
 const showMeetingModal = ref(false)
 
 const form = ref({
@@ -125,7 +138,43 @@ const submitMeeting = () => {
 
 .nav-right {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  gap: 2rem;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  padding: 4px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+  background: white;
+  color: var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.lang-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(0,0,0,0.1);
 }
 
 .logo {
