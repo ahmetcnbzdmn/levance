@@ -2,7 +2,7 @@
   <div class="layout-wrapper">
     <Navbar />
     <main class="content">
-      <Home />
+      <router-view />
     </main>
     <Footer />
   </div>
@@ -11,7 +11,6 @@
 <script setup>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
-import Home from '../views/Home.vue'
 </script>
 
 <style scoped>

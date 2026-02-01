@@ -10,9 +10,9 @@
 
       <!-- Center: Links -->
       <ul class="nav-center">
-        <li><a href="#" class="nav-link">Hizmetlerimiz</a></li>
-        <li><a href="#" class="nav-link">Hakkımızda</a></li>
-        <li><a href="#" class="nav-link">Bize Ulaşın</a></li>
+        <li><router-link to="/hizmetlerimiz" class="nav-link">Hizmetlerimiz</router-link></li>
+        <li><router-link to="/" class="nav-link">Hakkımızda</router-link></li>
+        <li><router-link to="/" class="nav-link">Bize Ulaşın</router-link></li>
       </ul>
 
       <!-- Right: Action Button -->
