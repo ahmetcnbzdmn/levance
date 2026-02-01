@@ -6,11 +6,11 @@
         <div class="contact-forms-area fade-in">
           <div class="contact-card">
             <h1 class="contact-title">Bize Ulaşın</h1>
-            <p class="contact-subtitle">İhtiyacınıza uygun iletişim kanalını seçin.</p>
+            <p class="contact-subtitle">İhtiyacınıza uygun iletişim kanalını seçin, 24 saat içerisinde geri dönüş yapalım.</p>
 
             <Tabs value="0">
               <TabList>
-                <Tab value="0">Ticket / Destek</Tab>
+                <Tab value="0">Destek</Tab>
                 <Tab value="1">Partnerlik</Tab>
                 <Tab value="2">Kurumsal</Tab>
               </TabList>
@@ -45,7 +45,6 @@
                         <span>partner@levance.com</span>
                       </div>
                     </div>
-                    <Button label="Partnerlik Teklifi Gönder" class="p-button-outlined mt-6" />
                   </div>
                 </TabPanel>
 
@@ -56,8 +55,8 @@
                     <p>Basın bültenleri, kurumsal etkinlikler ve resmi yazışmalar için aşağıdaki kanalları kullanabilirsiniz.</p>
                     <div class="contact-details mt-6">
                       <div class="detail-item">
-                        <i class="pi pi-building"></i>
-                        <span>Levent, Büyükdere Cd. No:123, 34394 Şişli/İstanbul</span>
+                        <i class="pi pi-envelope"></i>
+                        <span>info@levance.com</span>
                       </div>
                       <div class="detail-item mt-4">
                         <i class="pi pi-phone"></i>
@@ -124,10 +123,10 @@ const sendTicket = () => {
 
 <style scoped>
 .contact-page {
-  padding-top: 4rem;
+  padding-top: calc(var(--navbar-height) + 2rem);
   padding-bottom: 6rem;
   background-color: #f9fafb;
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: 100vh;
 }
 
 .contact-grid {
@@ -269,12 +268,46 @@ const sendTicket = () => {
 .mt-4 { margin-top: 1rem; }
 .mt-6 { margin-top: 1.5rem; }
 
+/* PrimeVue Tabs Overrides */
+:deep(.p-tablist-tab-list) {
+  background: transparent !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  gap: 1rem !important;
+}
+
+:deep(.p-tab) {
+  background: transparent !important;
+  border: none !important;
+  color: var(--text-muted) !important;
+  font-weight: 600 !important;
+  padding: 1rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+  border-bottom: 2px solid transparent !important;
+  margin-bottom: -2px !important;
+}
+
+:deep(.p-tab:hover) {
+  color: var(--primary-blue) !important;
+}
+
+:deep(.p-tab-active) {
+  color: var(--primary-blue) !important;
+  border-bottom: 2px solid var(--primary-blue) !important;
+}
+
+:deep(.p-tabpanels) {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
 @media (max-width: 1200px) {
   .contact-grid { grid-template-columns: 1fr; }
   .map-area { min-height: 400px; }
 }
 
 @media (max-width: 768px) {
+  .contact-page { padding-top: calc(var(--navbar-height) + 1rem); }
   .contact-card { padding: 2.5rem 1.5rem; }
   .form-grid { grid-template-columns: 1fr; }
   .full-width { grid-column: span 1; }
