@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ 'navbar-scrolled': scrolled }">
+  <nav class="navbar">
     <div class="container navbar-container">
       <!-- Left: Logo -->
       <div class="nav-left">
@@ -66,12 +66,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import InputText from 'primevue/inputtext'
 
-const scrolled = ref(false)
 const showMeetingModal = ref(false)
 
 const form = ref({
@@ -81,24 +80,11 @@ const form = ref({
   phone: ''
 })
 
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 20
-}
-
 const submitMeeting = () => {
   console.log('Meeting request:', form.value)
   showMeetingModal.value = false
-  // Reset form
   form.value = { name: '', company: '', email: '', phone: '' }
 }
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <style scoped>
@@ -107,27 +93,138 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 80px;
   display: flex;
   align-items: center;
   z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
-}
-
-.navbar-scrolled {
-  height: 70px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  width: 100%;
 }
+
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-center {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--deep-blue);
+}
+
+.logo-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--deep-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.router-link-active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.premium-nav-btn {
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.premium-nav-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(45, 108, 223, 0.2);
+}
+
+/* Modal Styling */
+.modal-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--deep-blue);
+}
+
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+
+@media (max-width: 992px) {
+  .nav-center { display: none; }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+</style>
 
 .logo {
   display: flex;
