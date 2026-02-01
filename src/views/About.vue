@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="about-hero">
       <div class="mesh-gradient"></div>
-      <div class="container relative z-10 text-center">
+      <div class="container relative z-10">
         <h1 class="about-title fade-up">Biz Kimiz?</h1>
         <p class="about-subtitle fade-up" style="animation-delay: 0.1s">
           Levance, dijital dönüşüm yolculuğunuzda stratejik ortağınız olmak için burada.
@@ -66,10 +66,10 @@
 
 <script setup>
 const stats = [
-  { value: '10+', label: 'Yıllık Deneyim' },
-  { value: '250+', label: 'Tamamlanan Proje' },
-  { value: '50+', label: 'Mutlu İş Ortağı' },
-  { value: '24/7', label: 'Teknik Destek' }
+  { value: '10+', label: 'Alanında Profesyonel Ekip Arkadaşı' },
+  { value: '35+', label: 'Tamamlanan Proje' },
+  { value: '8+', label: 'Yayımlanmış Proje' },
+  { value: '7/24', label: 'Teknik Destek' }
 ]
 </script>
 
@@ -105,7 +105,6 @@ const stats = [
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .story-section {
