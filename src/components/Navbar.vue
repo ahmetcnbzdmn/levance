@@ -11,7 +11,7 @@
       <!-- Center: Links -->
       <ul class="nav-center">
         <li><router-link to="/hizmetlerimiz" class="nav-link">Hizmetlerimiz</router-link></li>
-        <li><router-link to="/" class="nav-link">Hakkımızda</router-link></li>
+        <li><router-link to="/hakkimizda" class="nav-link">Hakkımızda</router-link></li>
         <li><router-link to="/" class="nav-link">Bize Ulaşın</router-link></li>
       </ul>
 
