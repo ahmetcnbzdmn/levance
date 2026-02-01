@@ -1,3 +1,4 @@
+```html
 <template>
   <section class="hero">
     <!-- Full-bleed Background Image with Blend -->
@@ -53,10 +54,10 @@ import Button from 'primevue/button'
 .hero-image-layer {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/hero-bg-new.png');
+  background-image: url('../assets/images/hero-digital-solutions.png');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.7) contrast(1.1);
+  filter: brightness(0.6) contrast(1.1);
 }
 
 .hero-overlay-layer {

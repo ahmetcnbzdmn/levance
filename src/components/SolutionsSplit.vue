@@ -99,7 +99,7 @@ import Button from 'primevue/button'
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 500px;
+  width: 500px; /* Fixed width to prevent text reflow on parent scale */
   margin: 0 auto;
 }
 

@@ -44,24 +44,36 @@
   align-items: center;
 }
 
-.image-mock {
+.image-container {
   width: 100%;
   height: 400px;
-  background-color: #f0f4ff;
-  border-radius: 24px;
   position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
 
-.image-mock::after {
-  content: '';
+.values-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.image-container:hover .values-img {
+  transform: scale(1.05);
+}
+
+.image-accent {
   position: absolute;
   top: 20px;
   right: -20px;
   width: 100px;
   height: 100px;
   background-color: var(--accent-green);
-  opacity: 0.2;
+  opacity: 0.3;
   border-radius: 50%;
+  z-index: 2;
 }
 
 h2 {
