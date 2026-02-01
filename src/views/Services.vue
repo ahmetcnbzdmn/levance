@@ -46,9 +46,14 @@ const services = [
     icon: 'pi pi-database'
   },
   {
-    title: 'Mobil Uygulama ve Size Özel Çözümler',
-    description: 'iOS ve Android platformları için kullanıcı odaklı, performanslı ve ölçeklenebilir mobil uygulama geliştirme.',
+    title: 'Mobil Uygulama Geliştirme',
+    description: 'iOS ve Android platformları için kullanıcı odaklı, yüksek performanslı ve ölçeklenebilir mobil uygulamalar.',
     icon: 'pi pi-mobile'
+  },
+  {
+    title: 'Size Özel Çözümler',
+    description: 'İşletmenizin kendine has ihtiyaçlarına yönelik, esnek ve tam kapsamlı özel yazılım geliştirme hizmetleri.',
+    icon: 'pi pi-lightbulb'
   }
 ]
 </script>
