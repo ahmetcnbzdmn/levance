@@ -37,11 +37,11 @@ import Button from 'primevue/button'
 <style scoped>
 .hero {
   position: relative;
-  min-height: 85vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: var(--deep-blue);
+  background-color: #0A1934;
 }
 
 .hero-bg-container {
@@ -53,20 +53,20 @@ import Button from 'primevue/button'
 .hero-image-layer {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/hero-bg.jpg');
+  background-image: url('../assets/images/hero-bg-new.png');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.65) saturate(1.2);
+  filter: brightness(0.7) contrast(1.1);
 }
 
 .hero-overlay-layer {
   position: absolute;
   inset: 0;
-  /* Complex gradient to blend text area and image area */
-  background: linear-gradient(135deg, 
-    rgba(26, 63, 134, 0.95) 0%, 
-    rgba(26, 63, 134, 0.6) 40%, 
-    rgba(45, 108, 223, 0.3) 100%
+  /* Premium dark gradient mask */
+  background: linear-gradient(90deg, 
+    rgba(10, 25, 52, 0.9) 0%, 
+    rgba(10, 25, 52, 0.7) 40%, 
+    transparent 100%
   );
 }
 
@@ -88,14 +88,14 @@ import Button from 'primevue/button'
 }
 
 .hero-glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 3.5rem;
-  max-width: 700px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  padding: 4.5rem;
+  max-width: 750px;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
 }
 
 .top-accent-bar {

@@ -4,7 +4,7 @@
       <div class="cta-content">
         <h2>Hemen bir toplantı planlayalım</h2>
         <p>İhtiyaçlarınızı dinlemek ve size en uygun çözümü sunmak için sabırsızlanıyoruz.</p>
-        <Button label="Randevu Al" class="cta-btn p-button-success" />
+        <Button label="Bize Ulaşın" class="cta-btn p-button-success" />
       </div>
     </div>
   </section>
